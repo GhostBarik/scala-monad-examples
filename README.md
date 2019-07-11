@@ -1,4 +1,4 @@
-# Examples of Monads in Scala language
+# Examples of Monads in Scala Programming Language
 
 Repository contains the following examples:
 * Option[T] - computation with failure

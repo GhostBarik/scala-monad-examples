@@ -183,7 +183,7 @@ object Main {
 
     for {
       c <- p1
-      tail <- oneOrMore(p1) or zero
+      tail <- zeroOrMore(p1)
     } yield {
       List(c) ++ tail
     }
@@ -320,7 +320,7 @@ object Main {
     val (events, _) = randomEvents(randomDoubles)
 
     println()
-    println("********** RANDOM EVENTS EXAMPLE ****************")
+    println("********** RANDOM MONAD EXAMPLE ****************")
     println()
     println(s"events: $events")
     println()

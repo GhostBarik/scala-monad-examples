@@ -274,7 +274,7 @@ object Main {
       List(c) ++ tail
     }
 
-    def randomString(length: Int): RandomM[String] = randomCharacterList(3) map (_.mkString(""))
+    def randomString(length: Int): RandomM[String] = randomCharacterList(length) map (_.mkString(""))
     def randomTimestamp: RandomM[Long] = randomDouble map (_ * 1000000.0) map (_.toLong)
 
     case class Event(guid: String, timestamp: Long, valid: Boolean)

@@ -175,10 +175,10 @@ object Main {
   // zero parser parses nothing, just return empty list
   def zero: ParserM[List[Nothing]] = unit(List.empty)
 
-  // apply parser zero or more times
+  // apply parser zero or more times (notice mutual recursion!)
   def zeroOrMore[A](p1: ParserM[A]): ParserM[List[A]] = oneOrMore(p1) or zero
 
-  // apply parser one or more times
+  // apply parser one or more times (notice mutual recursion!)
   def oneOrMore[A](p1: ParserM[A]): ParserM[List[A]] = {
 
     for {
